@@ -1,0 +1,304 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+/* Acceso para las fuentes, colores y otros estilos */
+:root {
+    --fuente-Moderustic: "Moderustic", sans-serif;
+    --color-primario: #0A3871;
+    --color-secundario: #EEF7FF;
+    --color-texto: #343A40;
+    --color-fondo-caja: rgba(240, 240, 240, 0.5);
+    --color-borde-caja: #3333332d;
+}
+
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-Moderustic);
+    background-color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.Imagen__superir__izquierda {
+    width: 100px;
+    margin: 3% 0 0 1%;
+    background-image: url('/Assets/Logo.png');
+    background-size: cover;
+}
+
+.cuadroTexto {
+    color: #0A3871;
+    width: 1000px;
+    max-width: 1000px;
+    margin: 2% 4% auto;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.texto__central {
+    width: 74%;
+    height: 400px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: #0A3871;
+    background-color: transparent;
+    text-align: left;
+    font-family: var(--fuente-Moderustic);
+    overflow: hidden;
+    resize: none;
+    
+}
+
+.Cuadro__mensaje__encriptado {
+    position: absolute;
+    top: 10%;
+    right: 3%;
+    width: 400px;
+    height: 600px;
+    background-color: var(--color-fondo-caja);
+    border: 1px solid var(--color-borde-caja);
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Imagen__mensaje__encriptado {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.Texto__mensaje__encriptado {
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 16px;
+    color: #000;
+    font-family: var(--fuente-Moderustic);
+    overflow: auto;
+    resize: none;
+    display: none; 
+    outline: none;
+}
+
+.Texto__mensaje__encriptado__superior {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-texto);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Texto__mensaje__encriptado__inferior {
+    font-size: 16px;
+    color: #495057;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.Texto__inferior__interactivo {
+    font-family: var(--fuente-Moderustic);
+    margin: 20px 0 0 5%;
+    max-width: 680px;
+    text-align: left;
+}
+
+.Instruccion {
+    font-size: 12px;
+    color: #495057;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.Texto__mensaje__interactivo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cuadro__uno,
+.cuadro__dos,
+.cuadro__copiar {
+    width: 350px;
+    height: 67px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--fuente-Moderustic);
+    font-size: 20px;
+    cursor: pointer;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+}
+
+.cuadro__uno {
+    color: #FFF;
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+.cuadro__dos,
+.cuadro__copiar {
+    color: var(--color-primario);
+    background-color: #FFF;
+    border: 1px solid var(--color-primario);
+}
+
+.cuadro__copiar {
+    display: none; 
+}
+
+
+@keyframes saltar {
+    0% {
+        transform: translateY(10);
+    }
+    50% {
+        transform: translateY(-5px); 
+    }
+    100% {
+        transform: translateY(10);
+    }
+}
+
+.cuadro__uno:active,
+.cuadro__dos:active,
+.cuadro__copiar:active {
+    animation: saltar 0.3s ease; 
+}
+
+/* Ajustes responsivos */
+@media screen and (max-width: 768px) {
+    .Imagen__mensaje__encriptado {
+        display: none;
+    }
+    .Imagen__superir__izquierda {
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+
+    .cuadroTexto {
+        width: 100%;
+    }
+
+    .texto__central {
+        font-size: 18px;
+    }
+
+    .Cuadro__mensaje__encriptado {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .Texto__inferior__interactivo {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .cuadro__uno {
+        width: 90%;
+        font-size: 18px;
+    }
+    .cuadro__dos {
+        width: 90%;
+        font-size: 18px;
+    }
+    .cuadro__copiar {
+        width: 90%;
+        font-size: 18px;
+    }
+}
+
+
+/* aqui va los cambios para que funcione correctamente en dispositivos moviles
+quita la imagen no lo olivdes*/
+
+@media screen and (max-width: 768px) {
+    
+    .Imagen__mensaje__encriptado{
+        display: none;
+    }
+    .Imagen__superir__izquierda {
+        margin-top: 1%;
+        margin-left: 1%;
+    }
+
+    .cuadroTexto {
+        width: 100%;
+        margin-left: 8%;
+    }
+
+    .texto__central {
+        font-size: 18px;
+    }
+
+    .Cuadro__mensaje__encriptado {
+        position: fixed;
+        bottom: 6%;
+        left: 5%;
+        top: auto;
+        right: auto;
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .Texto__mensaje__encriptado {
+        width: 100%;
+        height: calc(30vh - 130px); 
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none; 
+        font-size: 16px;
+        color: #000;
+        font-family: var(--fuente-Moderustic);
+        overflow: auto;
+        resize: none;
+        box-sizing: border-box; 
+    }
+
+    .Texto__inferior__interactivo {
+        position: relative;
+        margin: 20px auto;
+        width: 90%;
+        z-index: 1;
+        
+    }
+
+    .cuadro__uno{
+        width: 90%;
+        font-size: 18px;
+    }
+    .cuadro__dos{
+        width: 90%;
+        font-size: 18px;
+    }
+    .cuadro__copiar {
+        width: 90%;
+        font-size: 18px;
+    }
+}
+
+
+
+
