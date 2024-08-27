@@ -23,3 +23,5 @@ https://proyecto-de-alura-1.vercel.app/
 - Haz clic en el botón "Copiar" para copiar el texto encriptado al portapapeles.
 
 **Desarrollador: Aaron Rodriguez**
+
+![](https://danielo27.github.io/Portafolio-Alura-Challenge-Oracle-Next-Education-/assets/img/alura__logo.png)
